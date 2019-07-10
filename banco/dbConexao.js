@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 const conexao = mysql.createPool({
-    host: '127.0.0.1',
-    user: 'wesley',
-    password: 'password',
-    database: 'db_galeria'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE
 });
 
 module.exports = conexao;
